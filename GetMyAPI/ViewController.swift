@@ -10,8 +10,11 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
+    
+    
     @IBOutlet weak var firstPageTableView: UITableView!
     
+    @IBOutlet var allbutton: [UIButton]!
     
 
     var items = [Item]()
@@ -171,6 +174,35 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
 
     }
+    
+    
+    @IBAction func clickbutton(_ sender: Any) {
+        for button in allbutton  {
+            UIView.animate(withDuration: 0.8, animations: {
+                //print(String(button.isHidden))
+                button.isHidden = !button.isHidden
+                self.view.layoutIfNeeded()
+            })
+            
+            
+            
+        }
+    }
+    
+    @IBAction func clickSecondbutton(_ sender: Any) {
+        for button in allbutton  {
+            UIView.animate(withDuration: 0.8, animations: {
+                //print(String(button.isHidden))
+                button.isHidden = !button.isHidden
+                self.view.layoutIfNeeded()
+            })
+            
+            
+            
+        }
+        
+    }
+    
     
     
     
